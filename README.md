@@ -13,7 +13,6 @@ The app can broadcast the actual position (latitude, longitude, altitude and acc
 The app scans periodically BLE messages in search for a new location message and use it as Mock Location.
 
 It is needed to set the app as Mock Location Provider in Android developer Settings or through ADB:
-- to set as Mocking Location: adb shell appops set com.gh182.blelocationshareapp android:mock_location allow
-- to undo it: adb shell appops set com.gh182.blelocationshareapp android:mock_location deny
-- to ckeck for Mocking Permission: adb shell appops get com.gh182.blelocationshareapp android:mock_location
-
+- to set as Mocking Location: ```adb shell appops set com.gh182.blelocationshareapp android:mock_location allow```
+- to undo it: ```adb shell appops set com.gh182.blelocationshareapp android:mock_location deny```
+- to ckeck for Mocking Permission: ```adb shell appops get com.gh182.blelocationshareapp android:mock_location```
