@@ -16,3 +16,13 @@ It is needed to set the app as Mock Location Provider in Android developer Setti
 - to set as Mocking Location: ```adb shell appops set com.gh182.blelocationshareapp android:mock_location allow```
 - to undo it: ```adb shell appops set com.gh182.blelocationshareapp android:mock_location deny```
 - to ckeck for Mocking Permission: ```adb shell appops get com.gh182.blelocationshareapp android:mock_location```
+
+## Current bugs
+1. Location Sender is a tough beast to kill:
+    - The only way to stop Location Sender is by force closing the app (the button kills the service but it restarts)
+    - Stopping and restarting Location Sender continues to send the previous location and the new one (resulting in a big mess)
+
+2. Custom Power Settings is just a placeholder:
+    - It will be implemented in the future with time frequency for sending/receiving and transmission power
+
+3. So many other hidden gems you may find before me 
